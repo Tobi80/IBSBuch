@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IBS Buch</string>
+    <string name="large_text"></string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="anfang">Startseite</string>
+    <string name="dank">Dank</string>
+    <string name="search">Suche</string>
+    <string name="stay_awake">Bildschirm</string>
+
+</resources>

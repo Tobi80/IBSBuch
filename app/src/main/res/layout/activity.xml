@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/ice1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  1"
+                android:textStyle="italic" />
+
+
+            <Button
+                android:id="@+id/ice2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  2"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/ice403"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  3     Einsystem"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/ice406"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  3     Mehrsystem"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/icet5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  T     5 Teiler"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/icet7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  T     7 Teiler"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/icetd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="Baureihe    -             ICE  TD"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/zugsicherung"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="                                      Zugsicherung"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/identnummer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@mipmap/folder"
+                android:gravity="left|center_vertical"
+                android:text="                                      Identnummern"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="android:dialogIcon">@mipmap/ibsbuch</item>-->
+        <!--<item name="android:textSize">11dip</item>-->
+        <!--<item name="android:actionBarSize">40dp</item>-->
+        <!--<item name="colorAccent">@color/actionbar</item>-->
+
+
+    <!--</style>-->
+
+    <!--<style name="AppTheme2" parent="Theme.AppCompat">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="android:dialogIcon">@mipmap/ibsbuch</item>-->
+        <!--<item name="android:textSize">11dip</item>-->
+        <!--<item name="android:actionBarSize">40dp</item>-->
+        <!--<item name="colorAccent">@color/actionbar</item>-->
+
+    <!--</style>-->
+</resources>

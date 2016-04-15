@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:key="first_category"
+        android:title="Einstellungen">
+
+    </PreferenceCategory>
+
+    <CheckBoxPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="false"
+        android:key="stay_awake"
+        android:summaryOff="Bildschirm schaltet sich ab"
+        android:summaryOn="Bildschirm bleibt an"
+        android:title="Bildschrim wach halten" />
+
+    <CheckBoxPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="false"
+        android:key="theme"
+        android:summaryOff="Theme Hell"
+        android:summaryOn="Theme Dunkel"
+        android:title="Aussehen"/>
+
+</PreferenceScreen>
