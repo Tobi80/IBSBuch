@@ -166,9 +166,6 @@ public class Splashscreen extends Activity {
 ////                        } catch (Exception e) {
 ////                            e.printStackTrace();
 ////                        }
-////                              Connectet dann nicht!?
-////                        connectivityManager.unregisterNetworkCallback(builder.build(),this);
-////                        connectivityManager.requestNetwork(builder.build(),this);
 //
 //                    }
 //
@@ -180,17 +177,12 @@ public class Splashscreen extends Activity {
 //
 //    @Override
 //    protected void onPause() {
-//
 //        unregisterReceiver(MyBroadcastReceiver);
 //        super.onPause();
 //    }
 //
 //    @Override
 //    protected void onResume() {
-//
-////        IntentFilter filter = new IntentFilter();
-////                filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-////        registerReceiver(MyBroadcastReceiver, filter);
 //        registerReceiver(MyBroadcastReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 //        super.onResume();
 //    }
@@ -199,63 +191,7 @@ public class Splashscreen extends Activity {
 //}
 
 
-//    ComponentName component = new ComponentName(getApplicationContext(), Splashscreen.class);
-//    PackageManager pm = getApplicationContext().getPackageManager();
-//      pm.setComponentEnabledSetting(
-//        component,
-//        PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-//        PackageManager.DONT_KILL_APP);
 
-
-//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-//
-//
-//            final ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-//            final NetworkRequest.Builder builder;
-//            builder = new NetworkRequest.Builder();
-//
-//            //set the transport type do WIFI
-//            builder.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
-//
-//                manager.requestNetwork(builder.build(), new ConnectivityManager.NetworkCallback() {
-//
-//
-//                @Override
-//                public void onAvailable(Network network) {
-//
-//
-//                    new Handler().postDelayed(new Runnable() {
-//
-//                        @Override
-//                        public void run() {
-//
-//                            Intent i = new Intent(Splashscreen.this, MainActivity.class);
-//                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                            startActivity(i);
-//                            finish();
-//
-//
-//                        }
-//                    }, SPLASH_TIME_OUT);
-//
-//
-////                    }  else {
-////
-////                        }
-//                    try {
-//
-////                                do a callback or something else to alert your code that it's ok
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                    // Connectet dann nicht!?
-////                        manager.unregisterNetworkCallback(this);
-//
-//                }
-//
-//            };
-//        }
-//    }
 
 
 
