@@ -26,10 +26,10 @@ public class Splashscreen extends Activity {
     private WifiManager wifi;
     private static int SPLASH_TIME_OUT = 3000; //4000
     private WebView webView;
+    private NetworkMonitorReceiver receiver;
 //    private static final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 0;
 //    private static final int REQUEST_CODE = 0;
 
-    private NetworkMonitorReceiver receiver;
 
     @Override
 
@@ -67,6 +67,7 @@ public class Splashscreen extends Activity {
         wifi.setWifiEnabled(true);
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -103,7 +104,7 @@ public class Splashscreen extends Activity {
                         public void run() {
 
                             Intent i = new Intent(Splashscreen.this, MainActivity.class);
-                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(i);
                             finish();
 
@@ -122,7 +123,7 @@ public class Splashscreen extends Activity {
 
     }
 }
-    //  BroadcastReceiver MyBroadcastReceiver = new BroadcastReceiver() {
+//  BroadcastReceiver MyBroadcastReceiver = new BroadcastReceiver() {
 //    private BroadcastReceiver MyBroadcastReceiver = new BroadcastReceiver() {
 //
 //        @Override
