@@ -19,8 +19,7 @@ import android.widget.ImageView;
 public class ICE1 extends AppCompatActivity {
 
 
-
-    Button ICE1SaugkreisGTO, ICE1ZSIsoPruefung,ICE1Triebdrehgestellemessen;
+    Button ICE1SaugkreisGTO, ICE1ZSIsoPruefung, ICE1Triebdrehgestellemessen;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -28,15 +27,13 @@ public class ICE1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-           prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        if(prefs.getBoolean("theme", false)) {
+        prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
         } else {
-                setTheme(R.style.AppTheme);
-            }
-
-
+            setTheme(R.style.AppTheme);
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ice1);

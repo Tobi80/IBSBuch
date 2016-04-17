@@ -24,15 +24,15 @@ public class Splashscreen extends Activity {
 
 
     private WifiManager wifi;
-    private static int SPLASH_TIME_OUT = 3000; //4000
+    private static int SPLASH_TIME_OUT = 3200; //4000
     private WebView webView;
     private NetworkMonitorReceiver receiver;
-//    private static final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 0;
-//    private static final int REQUEST_CODE = 0;
+    //  private static final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 0;
+//  private static final int REQUEST_CODE = 0;
+    private Snackbar snackbar, snackbar2;
 
 
     @Override
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -41,8 +41,9 @@ public class Splashscreen extends Activity {
         setContentView(R.layout.splash);
 
         RelativeLayout parentLayout = (RelativeLayout) findViewById(R.id.coordinatorLayout);
-        Snackbar snackbar = Snackbar
-                .make(parentLayout, "Verbinde mit IBS Wlan. Bitte warten.", Snackbar.LENGTH_LONG);
+
+        snackbar = Snackbar
+                .make(parentLayout, "Verbinde mit IBS Wlan. Bitte warten", Snackbar.LENGTH_INDEFINITE);
 
         snackbar.show();
 
@@ -97,7 +98,12 @@ public class Splashscreen extends Activity {
             if (networkInfo != null && networkInfo.isConnected()) {
 
                 if (networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+                    snackbar.dismiss();
+                    RelativeLayout parentLayout = (RelativeLayout) findViewById(R.id.coordinatorLayout);
+                    snackbar2 = Snackbar
+                            .make(parentLayout, "IBS Wlan verbunden. Starte IBS-Buch", Snackbar.LENGTH_LONG);
 
+                    snackbar2.show();
                     new Handler().postDelayed(new Runnable() {
 
                         @Override

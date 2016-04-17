@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Created by Tobi on 14.02.2016.
@@ -92,10 +91,8 @@ public class Suche extends AppCompatActivity {
                 Intent i = new Intent(Suche.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
-                Toast.makeText(getApplicationContext(),
-                        "SgK", Toast.LENGTH_SHORT)
-                        .show();
             }
+
             if (itemValue.contains("ZSIsoPruefung ICE1")) {
                 Bildpfad = "ice1/ICE1ZSIsoPruefung.jpg";
                 Intent i = new Intent(Suche.this, Server.class);

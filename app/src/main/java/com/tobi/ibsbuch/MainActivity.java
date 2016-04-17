@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), MainActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
 
-//        gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
+//      gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
 
         ice1 = (Button) findViewById(R.id.ice1);
         ice2 = (Button) findViewById(R.id.ice2);

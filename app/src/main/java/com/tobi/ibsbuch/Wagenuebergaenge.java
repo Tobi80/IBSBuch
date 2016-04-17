@@ -35,7 +35,6 @@ public class Wagenuebergaenge extends AppCompatActivity {
         setContentView(R.layout.wagenuebergaenge);
 
 
-
         ICET5Wagenübergänge01 = (Button) findViewById(R.id.ICET5Wagenübergänge01);
         ICET5Wagenübergänge17 = (Button) findViewById(R.id.ICET5Wagenübergänge17);
         ICET5Wagenübergänge76 = (Button) findViewById(R.id.ICET5Wagenübergänge76);
