@@ -24,7 +24,7 @@ public class Splashscreen extends Activity {
 
 
     private WifiManager wifi;
-    private static int SPLASH_TIME_OUT = 3200; //4000
+    private static int SPLASH_TIME_OUT = 3100; //4000
     private WebView webView;
     private NetworkMonitorReceiver receiver;
     //  private static final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 0;
