@@ -118,7 +118,7 @@
         </activity>
 
         <activity
-            android:name=".Wagenuebergaenge"
+            android:name=".ICET5Wagenuebergaenge"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
 

@@ -121,7 +121,7 @@ public class Suche extends AppCompatActivity {
                 startActivity(i);
             }
             if (itemValue.contains("Wagenuebergaenge ICET5")) {
-                Intent i = new Intent(Suche.this, Wagenuebergaenge.class);
+                Intent i = new Intent(Suche.this, ICET5Wagenuebergaenge.class);
                 startActivity(i);
             }
             if (itemValue.contains("Triebdrehgestelle Messen ICE1")) {

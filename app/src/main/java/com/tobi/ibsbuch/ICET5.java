@@ -69,7 +69,7 @@ public class ICET5 extends AppCompatActivity {
 
         ICET5Wagenuebergaenge.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(ICET5.this, Wagenuebergaenge.class);
+                Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5Wagenuebergaenge.class);
                 startActivity(i);
 
             }

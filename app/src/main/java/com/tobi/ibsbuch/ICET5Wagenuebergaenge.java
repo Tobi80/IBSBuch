@@ -13,7 +13,7 @@ import android.widget.Button;
 /**
  * Created by Tobi on 24.03.2016.
  */
-public class Wagenuebergaenge extends AppCompatActivity {
+public class ICET5Wagenuebergaenge extends AppCompatActivity {
 
 
     Button ICET5Wagenübergänge01, ICET5Wagenübergänge17, ICET5Wagenübergänge76, ICET5Wagenübergänge65;
@@ -43,7 +43,7 @@ public class Wagenuebergaenge extends AppCompatActivity {
         ICET5Wagenübergänge01.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bildpfad = "icet5/ICET5Wagenübergänge01.jpg";
-                Intent i = new Intent(Wagenuebergaenge.this, Server.class);
+                Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
@@ -52,7 +52,7 @@ public class Wagenuebergaenge extends AppCompatActivity {
         ICET5Wagenübergänge17.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bildpfad = "icet5/ICET5Wagenübergänge17.jpg";
-                Intent i = new Intent(Wagenuebergaenge.this, Server.class);
+                Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
@@ -61,7 +61,7 @@ public class Wagenuebergaenge extends AppCompatActivity {
         ICET5Wagenübergänge76.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bildpfad = "icet5/ICET5Wagenübergänge76.jpg";
-                Intent i = new Intent(Wagenuebergaenge.this, Server.class);
+                Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
@@ -70,7 +70,7 @@ public class Wagenuebergaenge extends AppCompatActivity {
         ICET5Wagenübergänge65.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bildpfad = "icet5/ICET5Wagenübergänge65.jpg";
-                Intent i = new Intent(Wagenuebergaenge.this, Server.class);
+                Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
@@ -92,7 +92,7 @@ public class Wagenuebergaenge extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.anfang) {
-            Intent i = new Intent(Wagenuebergaenge.this, MainActivity.class);
+            Intent i = new Intent(ICET5Wagenuebergaenge.this, MainActivity.class);
             startActivity(i);
 
 
