@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/ICET5_WTB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="WTB" />
+
+            <Button
+                android:id="@+id/ICET5_0_MVB1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0 MVB WE1" />
+
+            <Button
+                android:id="@+id/ICET5_0_MVB2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0 MVB WE2" />
+
+            <Button
+                android:id="@+id/ICET5_1_MVB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1 MVB " />
+
+            <Button
+                android:id="@+id/ICET5_7_MVB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="7 MVB " />
+
+            <Button
+                android:id="@+id/ICET5_6_MVB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="6 MVB " />
+
+            <Button
+                android:id="@+id/ICET5_5_MVB1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="5 MVB WE1 " />
+
+            <Button
+                android:id="@+id/ICET5_5_MVB2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="5 MVB WE2 " />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

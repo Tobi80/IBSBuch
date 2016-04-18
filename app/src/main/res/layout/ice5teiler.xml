@@ -29,11 +29,11 @@
                 android:text="Wagenübergänge" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/ICET5Mvb"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="MVB - Teilnehmer" />
 
             <Button
                 android:id="@+id/button4"

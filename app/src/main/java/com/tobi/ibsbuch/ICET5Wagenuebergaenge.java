@@ -32,7 +32,7 @@ public class ICET5Wagenuebergaenge extends AppCompatActivity {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wagenuebergaenge);
+        setContentView(R.layout.icet5wagenuebergaenge);
 
 
         ICET5Wagenübergänge01 = (Button) findViewById(R.id.ICET5Wagenübergänge01);

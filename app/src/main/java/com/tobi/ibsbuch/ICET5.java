@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICET5 extends AppCompatActivity {
 
 
-    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge;
+    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge, ICET5Mvb;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -29,7 +29,7 @@ public class ICET5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        if(prefs.getBoolean("theme", false)) {
+        if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
         } else {
@@ -41,6 +41,7 @@ public class ICET5 extends AppCompatActivity {
 
         ICET5AsrSetzMaske = (Button) findViewById(R.id.ICET5AsrSetzMaske);
         ICET5Wagenuebergaenge = (Button) findViewById(R.id.ICET5Wagenuebergaenge);
+        ICET5Mvb = (Button) findViewById(R.id.ICET5Mvb);
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -70,6 +71,13 @@ public class ICET5 extends AppCompatActivity {
         ICET5Wagenuebergaenge.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5Wagenuebergaenge.class);
+                startActivity(i);
+
+            }
+        });
+        ICET5Mvb.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5Mvb.class);
                 startActivity(i);
 
             }
