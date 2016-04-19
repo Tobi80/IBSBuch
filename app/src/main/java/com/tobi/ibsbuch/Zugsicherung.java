@@ -7,34 +7,50 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * Created by Tobi on 25.02.2016.
  */
 public class Zugsicherung extends AppCompatActivity {
 
-    Button button;
+    Button aaa;
     SharedPreferences prefs;
     String Bildpfad;
+    Animation scroll;
+    ImageView fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
-        if(prefs.getBoolean("theme", false)) {
+        if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
         } else {
             setTheme(R.style.AppTheme);
         }
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ice1);
+        setContentView(R.layout.zugsicherung);
 
 
+        fab = (ImageView) findViewById(R.id.fab);
+        fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
 
-
-
+        scroll = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.scrollup);
+        fab.startAnimation(scroll);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Zugsicherung.this, Suche.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

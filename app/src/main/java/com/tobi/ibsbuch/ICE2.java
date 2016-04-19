@@ -18,7 +18,7 @@ import android.widget.ImageView;
  */
 public class ICE2 extends AppCompatActivity {
 
-    Button ICE1SaugkreisGTO;
+    Button ICE1SaugkreisGTO,ICE1Zwischenkreis,ICE1Erdschlusserfassung,ICETemperaturen;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -40,6 +40,9 @@ public class ICE2 extends AppCompatActivity {
 
 
         ICE1SaugkreisGTO = (Button) findViewById(R.id.ICE1SaugkreisGTO);
+        ICE1Zwischenkreis = (Button) findViewById(R.id.ICE1Zwischenkreis);
+        ICE1Erdschlusserfassung = (Button) findViewById(R.id.ICE1Erdschlusserfassung);
+        ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
 
 
         fab = (ImageView) findViewById(R.id.fab);
@@ -62,6 +65,36 @@ public class ICE2 extends AppCompatActivity {
                 Intent i = new Intent(ICE2.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
+            }
+        });
+        ICE1Zwischenkreis.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICE1Zwischenkreis.jpg";
+                Intent i = new Intent(ICE2.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE1Erdschlusserfassung.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICE1Erdschlusserfassung.jpg";
+                Intent i = new Intent(ICE2.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICETemperaturen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Intent i = new Intent(ICE2.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
 
             }
         });

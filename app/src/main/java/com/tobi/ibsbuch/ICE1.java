@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICE1 extends AppCompatActivity {
 
 
-    Button ICE1SaugkreisGTO, ICE1ZSIsoPruefung, ICE1Triebdrehgestellemessen;
+    Button ICE1SaugkreisGTO, ICE1ZSIsoPruefung, ICE1Triebdrehgestellemessen,ICE1Neumon,ICE1Zwischenkreis,ICE1Erdschlusserfassung,ICETemperaturen;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -41,6 +41,10 @@ public class ICE1 extends AppCompatActivity {
         ICE1SaugkreisGTO = (Button) findViewById(R.id.ICE1SaugkreisGTO);
         ICE1ZSIsoPruefung = (Button) findViewById(R.id.ICE1ZSIsoPruefung);
         ICE1Triebdrehgestellemessen = (Button) findViewById(R.id.ICE1Triebdrehgestellemessen);
+        ICE1Neumon = (Button) findViewById(R.id.ICE1Neumon);
+        ICE1Zwischenkreis = (Button) findViewById(R.id.ICE1Zwischenkreis);
+        ICE1Erdschlusserfassung = (Button) findViewById(R.id.ICE1Erdschlusserfassung);
+        ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -82,6 +86,46 @@ public class ICE1 extends AppCompatActivity {
                 Intent i = new Intent(ICE1.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+            }
+        });
+        ICE1Neumon.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICE1Neumon.jpg";
+                Intent i = new Intent(ICE1.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE1Zwischenkreis.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICE1Zwischenkreis.jpg";
+                Intent i = new Intent(ICE1.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE1Erdschlusserfassung.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICE1Erdschlusserfassung.jpg";
+                Intent i = new Intent(ICE1.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICETemperaturen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Intent i = new Intent(ICE1.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
             }
         });
     }

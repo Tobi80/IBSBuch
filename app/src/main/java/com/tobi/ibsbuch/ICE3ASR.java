@@ -16,11 +16,10 @@ import android.widget.ImageView;
 /**
  * Created by Tobi on 22.12.2015.
  */
-public class ICET5 extends AppCompatActivity {
+public class ICE3ASR extends AppCompatActivity {
 
-
-    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge, ICET5Mvb,ICETemperaturen;
     SharedPreferences prefs;
+    Button ICETemperaturen;
     String Bildpfad;
     Animation scroll;
     ImageView fab;
@@ -29,20 +28,17 @@ public class ICET5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        if (prefs.getBoolean("theme", false)) {
+        if(prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
         } else {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ice5teiler);
+        setContentView(R.layout.icetd);
 
-
-        ICET5AsrSetzMaske = (Button) findViewById(R.id.ICET5AsrSetzMaske);
-        ICET5Wagenuebergaenge = (Button) findViewById(R.id.ICET5Wagenuebergaenge);
-        ICET5Mvb = (Button) findViewById(R.id.ICET5Mvb);
         ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -53,47 +49,24 @@ public class ICET5 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ICET5.this, Suche.class);
+                Intent intent = new Intent(ICE3ASR.this, Suche.class);
                 startActivity(intent);
             }
         });
 
-
-        ICET5AsrSetzMaske.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bildpfad = "icet5/ICET5AsrSetzMaske.jpg";
-                Intent i = new Intent(ICET5.this, Server.class);
-                i.putExtra("Bildpfad_Server", "" + Bildpfad);
-                startActivity(i);
-            }
-        });
-
-
-        ICET5Wagenuebergaenge.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5Wagenuebergaenge.class);
-                startActivity(i);
-
-            }
-        });
-        ICET5Mvb.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5MVB.class);
-                startActivity(i);
-
-            }
-        });
         ICETemperaturen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bildpfad = "ice1/ICETemperaturen.jpg";
-                Intent i = new Intent(ICET5.this, Server.class);
+                Intent i = new Intent(ICE3ASR.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
 
 
             }
         });
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -109,9 +82,8 @@ public class ICET5 extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.anfang) {
-            Intent i = new Intent(ICET5.this, MainActivity.class);
+            Intent i = new Intent(ICE3ASR.this, MainActivity.class);
             startActivity(i);
-
 
             return true;
         }

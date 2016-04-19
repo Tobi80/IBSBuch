@@ -37,32 +37,32 @@
                 android:text="Triebdrehgestelle Messen" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/ICE1Neumon"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="Neumon Befehle" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/ICE1Zwischenkreis"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="Zwischenkreis Aufladung" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/ICE1Erdschlusserfassung"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="Erdschlusserfassung prüfen" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/ICETemperaturen"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="Temperaturen Probefahrt" />
 
             <Button
                 android:id="@+id/button8"

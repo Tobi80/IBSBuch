@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICET7 extends AppCompatActivity {
 
 
-    Button ICET5AsrSetzMaske;
+    Button ICET5AsrSetzMaske, ICETemperaturen;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -40,7 +40,7 @@ public class ICET7 extends AppCompatActivity {
 
 
         ICET5AsrSetzMaske = (Button) findViewById(R.id.ICET5AsrSetzMaske);
-
+        ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -67,7 +67,16 @@ public class ICET7 extends AppCompatActivity {
             }
         });
 
+        ICETemperaturen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Intent i = new Intent(ICET7.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
 
+
+            }
+        });
 
     }
 

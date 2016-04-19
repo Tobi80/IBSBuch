@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICETD extends AppCompatActivity {
 
     SharedPreferences prefs;
-    Button button1;
+    Button ICETemperaturen;
     String Bildpfad;
     Animation scroll;
     ImageView fab;
@@ -37,6 +37,8 @@ public class ICETD extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.icetd);
 
+        ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -49,6 +51,17 @@ public class ICETD extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ICETD.this, Suche.class);
                 startActivity(intent);
+            }
+        });
+
+        ICETemperaturen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Intent i = new Intent(ICETD.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
             }
         });
 

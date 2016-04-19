@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         aua = new AutoUpdateApk(getApplicationContext());
 
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
+//        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+//        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
 
 //      gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
 
