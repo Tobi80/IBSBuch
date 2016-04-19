@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICET5 extends AppCompatActivity {
 
 
-    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge, ICET5Mvb,ICETemperaturen;
+    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge, ICET5MVB,ICETemperaturen;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -41,7 +41,7 @@ public class ICET5 extends AppCompatActivity {
 
         ICET5AsrSetzMaske = (Button) findViewById(R.id.ICET5AsrSetzMaske);
         ICET5Wagenuebergaenge = (Button) findViewById(R.id.ICET5Wagenuebergaenge);
-        ICET5Mvb = (Button) findViewById(R.id.ICET5Mvb);
+        ICET5MVB = (Button) findViewById(R.id.ICET5MVB);
         ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
 
         fab = (ImageView) findViewById(R.id.fab);
@@ -76,7 +76,7 @@ public class ICET5 extends AppCompatActivity {
 
             }
         });
-        ICET5Mvb.setOnClickListener(new View.OnClickListener() {
+        ICET5MVB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5MVB.class);
                 startActivity(i);

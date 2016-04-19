@@ -14,117 +14,82 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <Button
-                android:id="@+id/ICET5AsrSetzMaske"
+                android:id="@+id/ICET7_WTB1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="ASR Setzmaske" />
+                android:text="                 WTB T-SR-FM-M" />
 
             <Button
-                android:id="@+id/ICET7MVB"
+                android:id="@+id/ICET7_WTB2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="MVB - Teilnehmer" />
-
+                android:text="                     WTB FMR-SR1-T1" />
 
             <Button
-                android:id="@+id/ICETemperaturen"
+                android:id="@+id/ICET7_0_MVB1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Temperaturen Probefahrt" />
+                android:text="                          417.0                  WE1" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/ICET7_0_MVB2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="                          417.0                  WE2" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/ICET7_1_MVB"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="417.1 " />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/ICET7_2_MVB"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="417.2" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/ICET7_8_MVB"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="417.8" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/ICET7_7_MVB"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
-
+                android:text="417.7" />
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/ICET7_6_MVB"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
-
+                android:text="417.6" />
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/ICET7_5_MVB1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
-
+                android:text="                              417.5                   WE1 " />
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/ICET7_5_MVB2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
-
-            <Button
-                android:id="@+id/button11"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Leer" />
-
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Leer" />
-
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Leer" />
-
-
+                android:text="                              417.5                   WE2 " />
         </LinearLayout>
     </ScrollView>
 
-    <ImageButton
-        android:id="@+id/fab"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp" />
-</RelativeLayout>
 
+</RelativeLayout>

@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICET7 extends AppCompatActivity {
 
 
-    Button ICET5AsrSetzMaske, ICETemperaturen;
+    Button ICET5AsrSetzMaske, ICETemperaturen,ICET7MVB;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -41,6 +41,8 @@ public class ICET7 extends AppCompatActivity {
 
         ICET5AsrSetzMaske = (Button) findViewById(R.id.ICET5AsrSetzMaske);
         ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+        ICET7MVB = (Button) findViewById(R.id.ICET7MVB);
+
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -77,7 +79,13 @@ public class ICET7 extends AppCompatActivity {
 
             }
         });
+        ICET7MVB.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(ICET7.this, com.tobi.ibsbuch.ICET7MVB.class);
+                startActivity(i);
 
+            }
+        });
     }
 
 
