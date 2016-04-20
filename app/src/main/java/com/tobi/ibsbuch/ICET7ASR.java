@@ -18,6 +18,11 @@ import android.widget.ImageView;
  */
 public class ICET7ASR extends AppCompatActivity {
 
+    //TEST
+    //
+    //
+    //
+    //
     SharedPreferences prefs;
     Button ICETemperaturen;
     String Bildpfad;
