@@ -23,6 +23,10 @@ public class ICET7ASR extends AppCompatActivity {
     //
     //
     //
+    //
+    //
+    //
+    //
     SharedPreferences prefs;
     Button ICETemperaturen;
     String Bildpfad;
