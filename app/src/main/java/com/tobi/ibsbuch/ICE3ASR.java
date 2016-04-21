@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICE3ASR extends AppCompatActivity {
 
     SharedPreferences prefs;
-    Button ICETemperaturen;
+    Button ICE3EW,ICE3TW,ICE3SR,ICE3MW4,ICE3MW5;
     String Bildpfad;
     Animation scroll;
     ImageView fab;
@@ -37,7 +37,11 @@ public class ICE3ASR extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.icetd);
 
-        ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+        ICE3EW = (Button) findViewById(R.id.ICE3EW);
+        ICE3TW = (Button) findViewById(R.id.ICE3TW);
+        ICE3SR = (Button) findViewById(R.id.ICE3SR);
+        ICE3MW4 = (Button) findViewById(R.id.ICE3MW4);
+        ICE3MW5 = (Button) findViewById(R.id.ICE3MW5);
 
 
         fab = (ImageView) findViewById(R.id.fab);
@@ -54,9 +58,49 @@ public class ICE3ASR extends AppCompatActivity {
             }
         });
 
-        ICETemperaturen.setOnClickListener(new View.OnClickListener() {
+        ICE3EW.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Bildpfad = "ice403/ICE403_EW_ASR.jpg";
+                Intent i = new Intent(ICE3ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE3TW.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice403/ICE403_TW_ASR.jpg";
+                Intent i = new Intent(ICE3ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE3SR.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice403/ICE403_SR_ASR.jpg";
+                Intent i = new Intent(ICE3ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE3MW4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice403/ICE403_MW4_ASR.jpg";
+                Intent i = new Intent(ICE3ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE3MW5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "ice403/ICE403_MW5_ASR.jpg";
                 Intent i = new Intent(ICE3ASR.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);

@@ -43,11 +43,11 @@
                 android:text="Temperaturen Probefahrt" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/ICET5ASR"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Leer" />
+                android:text="ASR Blockschaltpläne" />
 
             <Button
                 android:id="@+id/button6"

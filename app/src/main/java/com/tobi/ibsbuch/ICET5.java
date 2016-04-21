@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICET5 extends AppCompatActivity {
 
 
-    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge, ICET5MVB,ICETemperaturen;
+    Button ICET5AsrSetzMaske, ICET5Wagenuebergaenge, ICET5MVB,ICETemperaturen,ICET5ASR;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -43,6 +43,7 @@ public class ICET5 extends AppCompatActivity {
         ICET5Wagenuebergaenge = (Button) findViewById(R.id.ICET5Wagenuebergaenge);
         ICET5MVB = (Button) findViewById(R.id.ICET5MVB);
         ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+        ICET5ASR = (Button) findViewById(R.id.ICET5ASR);
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -88,6 +89,14 @@ public class ICET5 extends AppCompatActivity {
                 Bildpfad = "ice1/ICETemperaturen.jpg";
                 Intent i = new Intent(ICET5.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICET5ASR.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(ICET5.this, ICET5ASR.class);
                 startActivity(i);
 
 

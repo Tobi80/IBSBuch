@@ -18,17 +18,8 @@ import android.widget.ImageView;
  */
 public class ICET7ASR extends AppCompatActivity {
 
-    //TEST
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
     SharedPreferences prefs;
-    Button ICETemperaturen;
+    Button ICET7T,ICET7SR,ICET7FMR,ICET7M,ICET7FM;
     String Bildpfad;
     Animation scroll;
     ImageView fab;
@@ -46,7 +37,11 @@ public class ICET7ASR extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.icetd);
 
-        ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+        ICET7T = (Button) findViewById(R.id.ICET7T);
+        ICET7SR = (Button) findViewById(R.id.ICET7SR);
+        ICET7FMR = (Button) findViewById(R.id.ICET7FMR);
+        ICET7M = (Button) findViewById(R.id.ICET7M);
+        ICET7FM = (Button) findViewById(R.id.ICET7FM);
 
 
         fab = (ImageView) findViewById(R.id.fab);
@@ -63,9 +58,49 @@ public class ICET7ASR extends AppCompatActivity {
             }
         });
 
-        ICETemperaturen.setOnClickListener(new View.OnClickListener() {
+        ICET7T.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Bildpfad = "icet7/ICET7_T_ASR.jpg";
+                Intent i = new Intent(ICET7ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICET7SR.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "icet7/ICET7_SR_ASR.jpg";
+                Intent i = new Intent(ICET7ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICET7FMR.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "icet7/ICET7_FMR_ASR.jpg";
+                Intent i = new Intent(ICET7ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICET7M.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "icet7/ICET7_M_ASR.jpg";
+                Intent i = new Intent(ICET7ASR.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICET7FM.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Bildpfad = "icet7/ICET7_FM_ASR.jpg";
                 Intent i = new Intent(ICET7ASR.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);

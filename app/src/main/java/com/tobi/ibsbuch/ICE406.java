@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICE406 extends AppCompatActivity {
 
 
-    Button ICE403Wagenuebergaenge,ICETemperaturen;
+    Button ICE403Wagenuebergaenge,ICETemperaturen,ICE3ASR;
     SharedPreferences prefs;
     String Bildpfad;
     Animation scroll;
@@ -42,6 +42,7 @@ public class ICE406 extends AppCompatActivity {
 
         ICE403Wagenuebergaenge = (Button) findViewById(R.id.ICE403Wagenuebergaenge);
         ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
+        ICE3ASR = (Button) findViewById(R.id.ICE3ASR);
 
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
@@ -73,6 +74,14 @@ public class ICE406 extends AppCompatActivity {
                 Bildpfad = "ice1/ICETemperaturen.jpg";
                 Intent i = new Intent(ICE406.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+
+
+            }
+        });
+        ICE3ASR.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(ICE406.this, ICE3ASR.class);
                 startActivity(i);
 
 
