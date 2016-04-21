@@ -179,10 +179,7 @@ public class Suche extends AppCompatActivity {
                 Intent i = new Intent(Suche.this, ICET7ASR.class);
                 startActivity(i);
             }
-            if (itemValue.contains("ASR ICE3")) {
-                Intent i = new Intent(Suche.this, ICE3ASR.class);
-                startActivity(i);
-            }
+
 //            if (itemPosition == 40) {
 //
 //                Intent intent = new Intent(Suche.this, MainActivity.class);
