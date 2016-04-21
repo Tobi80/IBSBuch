@@ -26,7 +26,7 @@ public class Suche extends AppCompatActivity {
     String Bildpfad;
 
     String[] products = {"Saugkreis ICE1", "ZSIsoPruefung ICE1","Triebdrehgestelle Messen ICE1","Neumon ICE1","Zwischenkreis ICE1","Erdschlusserfassung ICE1","Temperaturen", "Skizze ICE403","ASR ICE3","Wagenuebergaenge ICE403",
-    "AsrSetzMaske ICET5", "Wagenuebergaenge ICET5","MVB ICET5", "ASR ICET5","MVB ICET7","ASR ICET7","ASR ICE3"};
+    "AsrSetzMaske ICET5", "Wagenuebergaenge ICET5","MVB ICET5", "ASR ICET5","MVB ICET7","ASR ICET7",};
 
 
     @Override
