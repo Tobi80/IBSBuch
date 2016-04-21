@@ -3,7 +3,6 @@ package com.tobi.ibsbuch;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -51,11 +50,11 @@ public class Dank extends Activity {
             mediacontroller.setAnchorView(videoplay);
 
 
-            Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
-                + R.raw.zukunft);
+//            Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
+//                + R.raw.zukunft);
 //            Uri video = Uri.parse(VideoURL);
-            videoplay.setMediaController(mediacontroller);
-            videoplay.setVideoURI(video);
+//            videoplay.setMediaController(mediacontroller);
+//            videoplay.setVideoURI(video);
 
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
