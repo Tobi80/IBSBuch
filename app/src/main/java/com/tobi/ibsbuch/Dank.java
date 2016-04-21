@@ -2,22 +2,21 @@ package com.tobi.ibsbuch;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.MediaController;
-import android.widget.VideoView;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 /**
  * Created by Tobi on 16.03.2016.
  */
 public class Dank extends Activity {
 
-    private VideoView videoplay;
-    private ProgressDialog pDialog;
-    String VideoURL = "http://172.25.40.26/ibs-buch/allgemein/zukunft";
+    ProgressDialog mProgress;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,58 +28,27 @@ public class Dank extends Activity {
 
         setContentView(R.layout.dank);
 
-//        videoplay = (VideoView) findViewById(R.id.video);
-        // Execute StreamVideo AsyncTask
+        // Progress Dialog
+//        mProgress = ProgressDialog.show(Dank.this, "Daten werden vom Server geladen", "Bitte warten.... ");
+//        mProgress.setCanceledOnTouchOutside(false);
+//        mProgress.setCancelable(true);
 
 
-        pDialog = new ProgressDialog(Dank.this);
-        pDialog.setTitle("Video wird geladen. Bitte warten....");
-        pDialog.setMessage("Buffering...");
-        pDialog.setIndeterminate(false);
-        pDialog.setCancelable(false);
-        pDialog.show();
-
-        try {
-
-            videoplay = (VideoView) findViewById(R.id.video);
-            videoplay.setMediaController(new MediaController(this));
-
-            MediaController mediacontroller = new MediaController(
-                    Dank.this);
-            mediacontroller.setAnchorView(videoplay);
-
-
-//            Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
-//                + R.raw.zukunft);
-//            Uri video = Uri.parse(VideoURL);
-//            videoplay.setMediaController(mediacontroller);
-//            videoplay.setVideoURI(video);
-
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-            e.printStackTrace();
-        }
-
-        videoplay.requestFocus();
-        videoplay.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            // Close the progress bar and play the video
-            public void onPrepared(MediaPlayer mp) {
-                pDialog.dismiss();
-                videoplay.start();
-            }
-        });
+        webView = (WebView) findViewById(R.id.webView2);
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.getSettings().setLoadsImagesAutomatically(true);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setDomStorageEnabled(true);
+        webView.setInitialScale(1); // Webview fit to screen size
+        webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webView.loadUrl("file:///android_asset/dank.jpg");
 
     }
-
 }
-
-//        videoplay = (VideoView) findViewById(R.id.video);
-//
-//        videoplay.setMediaController(new MediaController(this));
-//        Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
-//                + R.raw.zukunft);
-//        videoplay.setVideoURI(video);
-//        videoplay.getBufferPercentage();
-//        videoplay.start();
-//    }
-//}
