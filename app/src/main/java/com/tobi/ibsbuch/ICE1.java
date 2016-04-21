@@ -5,16 +5,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 /**
  * Created by Tobi on 21.12.2015.
@@ -27,9 +24,7 @@ public class ICE1 extends AppCompatActivity {
     String Bildpfad;
     Animation scroll;
     ImageView fab;
-    GestureDetector gestureDetector;
-    float x1, x2;
-    float y1, y2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +48,7 @@ public class ICE1 extends AppCompatActivity {
         ICE1Erdschlusserfassung = (Button) findViewById(R.id.ICE1Erdschlusserfassung);
         ICETemperaturen = (Button) findViewById(R.id.ICETemperaturen);
 
-//        gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
-//        new MyGestureDetector();
+
         fab = (ImageView) findViewById(R.id.fab);
         fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_suche));
 
@@ -141,46 +135,6 @@ public class ICE1 extends AppCompatActivity {
             }
         });
     }
-
-
-    public boolean onTouchEvent(MotionEvent event) {
-        switch (event.getAction()) {
-
-            // when user first touches the screen we get x and y coordinate
-            case MotionEvent.ACTION_DOWN: {
-                x1 = event.getX();
-                y1 = event.getY();
-                break;
-            }
-            case MotionEvent.ACTION_UP: {
-                x2 = event.getX();
-                y2 = event.getY();
-
-                //if left to right sweep event on screen
-                if (x1 < x2) {
-                    Toast.makeText(getApplicationContext(), "Left to Right Swap Performed", Toast.LENGTH_LONG).show();
-                }
-
-                // if right to left sweep event on screen
-                if (x1 > x2) {
-                    Toast.makeText(getApplicationContext(), "Right to Left Swap Performed", Toast.LENGTH_LONG).show();
-                }
-
-                // if UP to Down sweep event on screen
-                if (y1 < y2) {
-                    Toast.makeText(getApplicationContext(), "UP to Down Swap Performed", Toast.LENGTH_LONG).show();
-                }
-
-
-                if (y1 > y2) {
-                    Toast.makeText(getApplicationContext(), "Down to UP Swap Performed", Toast.LENGTH_LONG).show();
-                }
-                break;
-            }
-        }
-        return true;
-    }
-
 
 
     @Override

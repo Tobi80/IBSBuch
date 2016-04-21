@@ -50,9 +50,6 @@ public class Splashscreen extends Activity {
 
         webView = (WebView) findViewById(R.id.webView2);
         webView.setWebViewClient(new WebViewClient());
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
-        webView.setWebViewClient(new WebViewClient());
         webView.setWebChromeClient(new WebChromeClient());
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
