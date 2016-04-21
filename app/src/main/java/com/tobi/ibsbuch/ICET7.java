@@ -82,7 +82,7 @@ public class ICET7 extends AppCompatActivity {
         });
         ICET7MVB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(ICET7.this, com.tobi.ibsbuch.ICET7MVB.class);
+                Intent i = new Intent(ICET7.this, ICET7MVB.class);
                 startActivity(i);
 
             }

@@ -25,7 +25,8 @@ public class Suche extends AppCompatActivity {
     EditText inputSearch;
     String Bildpfad;
 
-    String[] products = {"Saugkreis ICE1", "ZSIsoPruefung ICE1", "Skizze ICE403", "Wagenuebergaenge ICE403", "AsrSetzMaske ICET5", "Wagenuebergaenge ICET5", "Triebdrehgestelle Messen ICE1"};
+    String[] products = {"Saugkreis ICE1", "ZSIsoPruefung ICE1","Triebdrehgestelle Messen ICE1","Neumon ICE1","Zwischenkreis ICE1","Erdschlusserfassung ICE1","Temperaturen", "Skizze ICE403","ASR ICE3","Wagenuebergaenge ICE403",
+    "AsrSetzMaske ICET5", "Wagenuebergaenge ICET5","MVB ICET5", "ASR ICET5","MVB ICET7","ASR ICET7"};
 
 
     @Override
@@ -99,14 +100,46 @@ public class Suche extends AppCompatActivity {
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
-
+            if (itemValue.contains("ZSIsoPruefung ICE1")) {
+                Bildpfad = "ice1/ICE1ZSIsoPruefung.jpg";
+                Intent i = new Intent(Suche.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+            }
+            if (itemValue.contains("Neumon ICE1")) {
+                Bildpfad = "ice1/ICE1Neumon.jpg";
+                Intent i = new Intent(Suche.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+            }
+            if (itemValue.contains("Zwischenkreis ICE1")) {
+                Bildpfad = "ice1/ICE1Zwischenkreis.jpg";
+                Intent i = new Intent(Suche.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+            }
+            if (itemValue.contains("Erdschlusserfassung ICE1")) {
+                Bildpfad = "ice1/ICETemperaturen.jpg";
+                Intent i = new Intent(Suche.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+            }
+            if (itemValue.contains("Temperaturen")) {
+                Bildpfad = "ice1/ICE1ZSIsoPruefung.jpg";
+                Intent i = new Intent(Suche.this, Server.class);
+                i.putExtra("Bildpfad_Server", "" + Bildpfad);
+                startActivity(i);
+            }
             if (itemValue.contains("Skizze ICE403")) {
                 Bildpfad = "ice403/ICE3Skizze.jpg";
                 Intent i = new Intent(Suche.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
-
+            if (itemValue.contains("ASR ICE3")) {
+                Intent i = new Intent(Suche.this, ICE3ASR.class);
+                startActivity(i);
+            }
             if (itemValue.contains("Wagenuebergaenge ICE403")) {
                 Bildpfad = "ice403/ICE3Wagenuebergaenge.jpg";
                 Intent i = new Intent(Suche.this, Server.class);
@@ -130,7 +163,22 @@ public class Suche extends AppCompatActivity {
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
             }
-
+            if (itemValue.contains("MVB ICET5")) {
+                Intent i = new Intent(Suche.this, com.tobi.ibsbuch.ICET5MVB.class);
+                startActivity(i);
+            }
+            if (itemValue.contains("ASR ICET5")) {
+                Intent i = new Intent(Suche.this, ICET5ASR.class);
+                startActivity(i);
+            }
+            if (itemValue.contains("MVB ICET7")) {
+                Intent i = new Intent(Suche.this, ICET7MVB.class);
+                startActivity(i);
+            }
+            if (itemValue.contains("ASR ICET7")) {
+                Intent i = new Intent(Suche.this, ICET7ASR.class);
+                startActivity(i);
+            }
 //            if (itemPosition == 40) {
 //
 //                Intent intent = new Intent(Suche.this, MainActivity.class);

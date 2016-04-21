@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +22,7 @@ import android.widget.ImageView;
  */
 public class MainActivity extends AppCompatActivity {
 
-    GestureDetector gestureDetector;
+//    GestureDetector gestureDetector;
     Button ice1, ice2, icet5, icet7, ice403, ice406, icetd, zugsicherung, identnummer;
     Animation scroll;
     ImageView fab;
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //        Intent i = new Intent(getApplicationContext(), MainActivity.class);
 //        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
 
-//      gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
+//        gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
 
         ice1 = (Button) findViewById(R.id.ice1);
         ice2 = (Button) findViewById(R.id.ice2);
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         scroll = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.scrollup);
+
         fab.startAnimation(scroll);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -287,24 +287,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
-//    @Override
-//    protected void onPause() {
-//        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-//        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
-//        finish();
-//        super.onPause();
-//    }
-//
-//    @Override
-//    public void onStop() {
-//        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-//        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
-//        finish();
-//        super.onStop();
-//
-//    }
 }
+
 
 
 //    private class GestureListener extends GestureDetector.SimpleOnGestureListener {

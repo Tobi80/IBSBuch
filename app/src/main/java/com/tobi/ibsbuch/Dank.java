@@ -51,9 +51,9 @@ public class Dank extends Activity {
             mediacontroller.setAnchorView(videoplay);
 
 
-//            Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
-//                + R.raw.zukunft);
-            Uri video = Uri.parse(VideoURL);
+            Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
+                + R.raw.zukunft);
+//            Uri video = Uri.parse(VideoURL);
             videoplay.setMediaController(mediacontroller);
             videoplay.setVideoURI(video);
 
