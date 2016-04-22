@@ -77,9 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
         ice1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 Intent i = new Intent(MainActivity.this, ICE1.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
 
             }
         });
@@ -87,55 +88,56 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE2.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         ice403.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE403.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         ice406.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE403.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         icet5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICET5.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         icet7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICET7.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         icetd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICETD.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         zugsicherung.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Zugsicherung.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         identnummer.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Server.class);
-                startActivity(i);
-
+//                Intent i = new Intent(MainActivity.this, Server.class);
+//                startActivity(i);
+//                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
 

@@ -38,7 +38,7 @@ public class ICE1 extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ice1);
-
+//        onShouldStartActivity();
 
         ICE1SaugkreisGTO = (Button) findViewById(R.id.ICE1SaugkreisGTO);
         ICE1ZSIsoPruefung = (Button) findViewById(R.id.ICE1ZSIsoPruefung);
@@ -158,5 +158,11 @@ public class ICE1 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
 
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
+    }
 }
