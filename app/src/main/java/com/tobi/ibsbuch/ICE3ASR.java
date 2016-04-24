@@ -19,7 +19,7 @@ import android.widget.ImageView;
 public class ICE3ASR extends AppCompatActivity {
 
     SharedPreferences prefs;
-    Button ICE3EW,ICE3TW,ICE3SR,ICE3MW4,ICE3MW5;
+    Button ICE3EW, ICE3TW, ICE3SR, ICE3MW4, ICE3MW5;
     String Bildpfad;
     Animation scroll;
     ImageView fab;
@@ -28,14 +28,14 @@ public class ICE3ASR extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        if(prefs.getBoolean("theme", false)) {
+        if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
         } else {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.icetd);
+        setContentView(R.layout.ice3asr);
 
         ICE3EW = (Button) findViewById(R.id.ICE3EW);
         ICE3TW = (Button) findViewById(R.id.ICE3TW);
@@ -135,4 +135,11 @@ public class ICE3ASR extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
+    }
 }

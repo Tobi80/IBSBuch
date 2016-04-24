@@ -28,7 +28,7 @@ public class ICETD extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        if(prefs.getBoolean("theme", false)) {
+        if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
         } else {
@@ -89,6 +89,8 @@ public class ICETD extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
     @Override
     public void onBackPressed() {
 

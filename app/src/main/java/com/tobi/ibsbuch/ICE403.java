@@ -64,6 +64,7 @@ public class ICE403 extends AppCompatActivity {
                 Intent i = new Intent(ICE403.this, Server.class);
                 i.putExtra("Bildpfad_Server", ""+Bildpfad);
                 startActivity(i);
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
 
             }
         });
@@ -75,7 +76,7 @@ public class ICE403 extends AppCompatActivity {
                 Intent i = new Intent(ICE403.this, Server.class);
                 i.putExtra("Bildpfad_Server", ""+Bildpfad);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
             }
         });
         ICETemperaturen.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +85,7 @@ public class ICE403 extends AppCompatActivity {
                 Intent i = new Intent(ICE403.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
 
             }
         });
@@ -92,7 +93,7 @@ public class ICE403 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(ICE403.this, ICE3ASR.class);
                 startActivity(i);
-
+                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
 
             }
         });

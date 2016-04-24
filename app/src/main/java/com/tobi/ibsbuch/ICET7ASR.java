@@ -135,4 +135,11 @@ public class ICET7ASR extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
+    }
 }

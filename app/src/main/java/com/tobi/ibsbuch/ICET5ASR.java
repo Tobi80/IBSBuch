@@ -35,7 +35,7 @@ public class ICET5ASR extends AppCompatActivity {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.icetd);
+        setContentView(R.layout.icet5asr);
 
         ICET5T = (Button) findViewById(R.id.ICET5T);
         ICET5SR = (Button) findViewById(R.id.ICET5SR);
@@ -123,5 +123,11 @@ public class ICET5ASR extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
 
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
+    }
 }

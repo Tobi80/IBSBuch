@@ -188,47 +188,9 @@ public class Server extends Activity {
 
 }
 
-/// Geht hiermit auch!!! Server XML muss ImageView wieder aktiviert werden / Webview deaktivieren
 
 
-//                    new LoadImage().execute("http://proof.nationalgeographic.com/files/2015/06/prod-yourshot-234763-5886957-web.jpg");
-//                }
-//            }
-//        });
-//    }
-//
-//    private class LoadImage extends AsyncTask<String, String, Bitmap> {
-//        @Override
-//        protected void onPreExecute() {
-//            super.onPreExecute();
-//
-//
-//        }
-//
-//        protected Bitmap doInBackground(String... args) {
-//            try {
-//                bitmap = BitmapFactory.decodeStream((InputStream) new URL(args[0]).getContent());
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//            return bitmap;
-//        }
-//
-//        protected void onPostExecute(Bitmap image) {
-//
-//            if (image != null) {
-//                img.setImageBitmap(image);
-////                mProgress.dismiss();
-//
-//            } else {
-//
-//
-//                Toast.makeText(Server.this, "Server Datei nicht gefunden!", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        }
-//    }
+
 
 
 

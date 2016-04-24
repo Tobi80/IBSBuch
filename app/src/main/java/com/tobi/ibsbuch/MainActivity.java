@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
         ice1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Intent i = new Intent(MainActivity.this, ICE1.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
