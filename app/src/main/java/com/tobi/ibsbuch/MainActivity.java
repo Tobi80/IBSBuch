@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Animation scroll;
     ImageView fab;
     private WifiManager wifi;
-    private com.tobi.ibsbuch.AutoUpdateApk aua;
+    private AutoUpdateApk aua;
 
     SharedPreferences prefs;
     private PreferenceChangeListener mPreferenceListener = null;

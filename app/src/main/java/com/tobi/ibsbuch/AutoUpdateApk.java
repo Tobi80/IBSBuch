@@ -160,7 +160,7 @@ public class AutoUpdateApk extends Observable {
     public static final long DAYS = 24 * HOURS;
 
     // 3-4 hours in dev.mode, 1-2 days for stable releases
-    private static long UPDATE_INTERVAL = 48 * HOURS;    // how often to check
+    private static long UPDATE_INTERVAL = 24 * HOURS;    // how often to check
 
     private static boolean mobile_updates = false;        // download updates over wifi only
 
@@ -171,7 +171,7 @@ public class AutoUpdateApk extends Observable {
     private final static String MD5_KEY = "md5";
 
     private static int NOTIFICATION_ID = 0xBEEF;
-    private static long WAKEUP_INTERVAL = 60 * MINUTES;   // Original 1
+    private static long WAKEUP_INTERVAL = 15 * MINUTES;   // Original 1
 //	private static long WAKEUP_INTERVAL = 5 * HOURS;
 
 
