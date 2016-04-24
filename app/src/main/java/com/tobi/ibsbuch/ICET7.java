@@ -28,7 +28,7 @@ public class ICET7 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if(prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
@@ -56,6 +56,7 @@ public class ICET7 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ICET7.this, Suche.class);
                 startActivity(intent);
+
             }
         });
 
@@ -66,6 +67,7 @@ public class ICET7 extends AppCompatActivity {
                 Intent i = new Intent(ICET7.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
 
             }
         });

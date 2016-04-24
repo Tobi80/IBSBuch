@@ -24,7 +24,7 @@ public class ICET5Wagenuebergaenge extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if(prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
@@ -55,6 +55,7 @@ public class ICET5Wagenuebergaenge extends AppCompatActivity {
                 Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -64,6 +65,7 @@ public class ICET5Wagenuebergaenge extends AppCompatActivity {
                 Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -73,6 +75,7 @@ public class ICET5Wagenuebergaenge extends AppCompatActivity {
                 Intent i = new Intent(ICET5Wagenuebergaenge.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 

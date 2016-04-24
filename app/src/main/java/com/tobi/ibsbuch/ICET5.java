@@ -28,7 +28,7 @@ public class ICET5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
@@ -56,6 +56,7 @@ public class ICET5 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ICET5.this, Suche.class);
                 startActivity(intent);
+
             }
         });
 
@@ -66,6 +67,7 @@ public class ICET5 extends AppCompatActivity {
                 Intent i = new Intent(ICET5.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -75,12 +77,14 @@ public class ICET5 extends AppCompatActivity {
                 Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5Wagenuebergaenge.class);
                 startActivity(i);
 
+
             }
         });
         ICET5MVB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(ICET5.this, com.tobi.ibsbuch.ICET5MVB.class);
                 startActivity(i);
+
 
             }
         });
@@ -120,8 +124,7 @@ public class ICET5 extends AppCompatActivity {
         if (id == R.id.anfang) {
             Intent i = new Intent(ICET5.this, MainActivity.class);
             startActivity(i);
-
-
+            overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
             return true;
         }
         return super.onOptionsItemSelected(item);

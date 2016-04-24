@@ -27,7 +27,7 @@ public class ICETD extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 

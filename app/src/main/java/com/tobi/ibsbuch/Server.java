@@ -14,7 +14,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -42,7 +41,7 @@ public class Server extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.server);
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         // Preferences
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
@@ -159,34 +158,44 @@ public class Server extends Activity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
-            webView.goBack();
+    public void onBackPressed() {
 
-            return true;
+        super.onBackPressed();
 
-        } else if ((keyCode == KeyEvent.KEYCODE_BACK) && !webView.canGoBack()) {
-
-            try {
-
-                Thread.sleep(200); // 1000 milliseconds is one second.
-
-            } catch (InterruptedException ex) {
-                Thread.currentThread().interrupt();
-
-            }
-
-
-            webView.clearCache(true);
-            finish();
-//            wifi.setWifiEnabled(false);
-        }
-
-        return super.onKeyDown(keyCode, event);
-
+        overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
     }
-
 }
+
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
+//            webView.goBack();
+//
+//            return true;
+//
+//        } else if ((keyCode == KeyEvent.KEYCODE_BACK) && !webView.canGoBack()) {
+//
+//            try {
+//
+//                Thread.sleep(200); // 1000 milliseconds is one second.
+//
+//            } catch (InterruptedException ex) {
+//                Thread.currentThread().interrupt();
+//
+//            }
+//
+//
+//            webView.clearCache(true);
+//            finish();
+////            wifi.setWifiEnabled(false);
+//        }
+//
+//        return super.onKeyDown(keyCode, event);
+//
+//    }
+
+
 
 
 

@@ -24,7 +24,7 @@ public class ICET7MVB extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if(prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
@@ -54,6 +54,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -63,6 +64,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -72,6 +74,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -81,6 +84,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_1_MVB.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +93,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_2_MVB.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +102,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_8_MVB.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +111,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_7_MVB.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +120,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_6_MVB.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +129,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_5_MVB1.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +138,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET7_5_MVB2.setOnClickListener(new View.OnClickListener() {
@@ -137,6 +147,7 @@ public class ICET7MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET7MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
     }

@@ -1,8 +1,10 @@
 package com.tobi.ibsbuch;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
@@ -22,10 +24,11 @@ import android.widget.ImageView;
  */
 public class MainActivity extends AppCompatActivity {
 
-//    GestureDetector gestureDetector;
+
     Button ice1, ice2, icet5, icet7, ice403, ice406, icetd, zugsicherung, identnummer;
     Animation scroll;
     ImageView fab;
+    private WifiManager wifi;
     private com.tobi.ibsbuch.AutoUpdateApk aua;
 
     SharedPreferences prefs;
@@ -38,16 +41,11 @@ public class MainActivity extends AppCompatActivity {
         mPreferenceListener = new PreferenceChangeListener();
         prefs.registerOnSharedPreferenceChangeListener(mPreferenceListener);
         ApplySettings();
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity);
 
         aua = new AutoUpdateApk(getApplicationContext());
-
-//        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-//        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | i.FLAG_ACTIVITY_CLEAR_TASK);
-
-//        gestureDetector = new GestureDetector(getApplicationContext(), new GestureListener());
 
         ice1 = (Button) findViewById(R.id.ice1);
         ice2 = (Button) findViewById(R.id.ice2);
@@ -72,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Suche.class);
                 startActivity(intent);
+
             }
         });
 
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE1.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
 
             }
         });
@@ -87,49 +85,49 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE2.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         ice403.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE403.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         ice406.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICE403.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         icet5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICET5.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         icet7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICET7.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         icetd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ICETD.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         zugsicherung.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Zugsicherung.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
             }
         });
         identnummer.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +155,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, Preferences.class));
+            overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
+
+
         }
 
         if (id == R.id.dank) {
@@ -173,8 +174,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ApplySettings() {
-
-
         // Checkbox Bildschirm wach halten
         Boolean stay_awake = prefs.getBoolean("stay_awake", false);
         if (stay_awake) {
@@ -216,41 +215,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    // CheckBox
-//    private class PreferenceClickListener implements Preference.OnPreferenceClickListener {
-//
-//        @Override
-//        public boolean onPreferenceClick(Preference preference) {
-//            // Checkbox Theme
-//            Boolean theme = prefs.getBoolean("theme", false);
-//            if (theme) {
-//
-//                setTheme(R.style.AppTheme2);
-//
-//
-//                Toast.makeText(getApplicationContext(), "t",
-//                        Toast.LENGTH_SHORT).show();
-//            } else {
-//
-//                setTheme(R.style.AppTheme);
-//
-//
-//                Toast.makeText(getApplicationContext(), "tt",
-//                        Toast.LENGTH_SHORT).show();
-//
-//            }
-//            recreate();
-//
-//            return true;
-//        }
-//    }
-
-//    private void ChangeTheme() {
-//        Intent intent = getIntent();
-//        finish();
-//        startActivity(intent);
-//    }
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -268,7 +232,8 @@ public class MainActivity extends AppCompatActivity {
             // Setting Positive "Yes" Button
             alertDialog.setPositiveButton("Ja", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-
+                    final WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                    wifi.setWifiEnabled(false);
                     finish();
                 }
             });
@@ -289,29 +254,3 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 }
-
-
-
-//    private class GestureListener extends GestureDetector.SimpleOnGestureListener {
-//
-//        @Override
-//        public boolean onDown(MotionEvent e) {
-//            return true;
-//        }
-//
-//        // event when double tap occurs
-//        @Override
-//        public boolean onDoubleTap(MotionEvent e) {
-//
-////            Intent i = new Intent(MainActivity.this,
-////                    EasterEgg.class);
-////            startActivity(i);
-//
-//            Toast.makeText(getApplicationContext(), "Double Tap",
-//                    Toast.LENGTH_LONG).show();
-//
-//
-//            return true;
-//        }
-//    }
-//        }

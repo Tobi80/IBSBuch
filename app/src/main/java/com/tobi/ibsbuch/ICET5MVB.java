@@ -24,7 +24,7 @@ public class ICET5MVB extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if(prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
@@ -50,6 +50,7 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -59,6 +60,7 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -68,6 +70,7 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
 
@@ -77,14 +80,17 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
+
         ICET5_7_MVB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bildpfad = "icet5/ICET5_7_MVB.jpg";
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET5_6_MVB.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +99,7 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET5_5_MVB1.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +108,7 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
         ICET5_5_MVB2.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +117,7 @@ public class ICET5MVB extends AppCompatActivity {
                 Intent i = new Intent(ICET5MVB.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
             }
         });
     }

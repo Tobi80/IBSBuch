@@ -26,6 +26,7 @@ public class Zugsicherung extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         if (prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
@@ -74,6 +75,7 @@ public class Zugsicherung extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public void onBackPressed() {
 

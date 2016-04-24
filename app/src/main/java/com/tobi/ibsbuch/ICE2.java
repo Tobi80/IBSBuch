@@ -27,7 +27,7 @@ public class ICE2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        overridePendingTransition(R.anim.activity_switch_in, R.anim.activity_out);
         if(prefs.getBoolean("theme", false)) {
             setTheme(R.style.AppTheme2);
 
@@ -56,6 +56,7 @@ public class ICE2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ICE2.this, Suche.class);
                 startActivity(intent);
+
             }
         });
 
@@ -65,6 +66,7 @@ public class ICE2 extends AppCompatActivity {
                 Intent i = new Intent(ICE2.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
+
 
             }
         });
@@ -95,7 +97,6 @@ public class ICE2 extends AppCompatActivity {
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
 
-
             }
         });
     }
@@ -116,7 +117,7 @@ public class ICE2 extends AppCompatActivity {
         if (id == R.id.anfang) {
             Intent i = new Intent(ICE2.this, MainActivity.class);
             startActivity(i);
-
+            overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
             return true;
         }
         return super.onOptionsItemSelected(item);
