@@ -70,7 +70,7 @@ public class Zugsicherung extends AppCompatActivity {
         if (id == R.id.anfang) {
             Intent i = new Intent(Zugsicherung.this, MainActivity.class);
             startActivity(i);
-
+            overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
             return true;
         }
         return super.onOptionsItemSelected(item);

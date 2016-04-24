@@ -138,7 +138,7 @@ public class ICET5MVB extends AppCompatActivity {
         if (id == R.id.anfang) {
             Intent i = new Intent(ICET5MVB.this, MainActivity.class);
             startActivity(i);
-
+            overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
 
             return true;
         }

@@ -97,7 +97,7 @@ public class ICET5Wagenuebergaenge extends AppCompatActivity {
         if (id == R.id.anfang) {
             Intent i = new Intent(ICET5Wagenuebergaenge.this, MainActivity.class);
             startActivity(i);
-
+            overridePendingTransition(R.anim.activity_switch_out, R.anim.activity_in);
 
             return true;
         }
