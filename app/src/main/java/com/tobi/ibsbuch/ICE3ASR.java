@@ -81,7 +81,7 @@ public class ICE3ASR extends AppCompatActivity {
         });
         ICE3SR.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Bildpfad = "ice403/ICE403_SR_ASR.jpg";
+                Bildpfad = "ice403/ICE403_SW_ASR.jpg";
                 Intent i = new Intent(ICE3ASR.this, Server.class);
                 i.putExtra("Bildpfad_Server", "" + Bildpfad);
                 startActivity(i);
