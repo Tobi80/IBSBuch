@@ -11,7 +11,6 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.view.Window;
 import android.webkit.WebChromeClient;
@@ -25,14 +24,14 @@ public class Splashscreen extends Activity {
 
 
     private WifiManager wifi;
-    private static int SPLASH_TIME_OUT = 3200; //4000
+//    private static int SPLASH_TIME_OUT = 200; //4000
     private WebView webView;
     //    private NetworkMonitorReceiver receiver;
-    ConnectivityManager connMan;
+    //    ConnectivityManager connMan;
     //  private static final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 0;
 //  private static final int REQUEST_CODE = 0;
     private Snackbar snackbar, snackbar2;
-
+    Thread thread;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,6 +68,7 @@ public class Splashscreen extends Activity {
 
     }
 
+
     BroadcastReceiver MyBroadcastReceiver = new BroadcastReceiver() {
 
 
@@ -76,53 +76,70 @@ public class Splashscreen extends Activity {
         public void onReceive(Context context, Intent intent) {
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                final ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-                final NetworkRequest.Builder builder;
+//                final ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                final ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkRequest.Builder builder;
                 builder = new NetworkRequest.Builder();
-
                 //set the transport type do WIFI
                 builder.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
 
                 manager.requestNetwork(builder.build(), new ConnectivityManager.NetworkCallback() {
-
                     @Override
-                    public void onAvailable(Network network) {
+                    public void onAvailable(final Network network) {
+
 
                         snackbar.dismiss();
                         RelativeLayout parentLayout = (RelativeLayout) findViewById(R.id.coordinatorLayout);
                         snackbar2 = Snackbar
                                 .make(parentLayout, "IBS Wlan verbunden. Starte IBS-Buch", Snackbar.LENGTH_LONG);
                         snackbar2.show();
-                        new Handler().postDelayed(new Runnable() {
 
+
+                        thread = new Thread() {
                             @Override
                             public void run() {
+                                try {
+                                    synchronized (this) {
+                                        wait(3000);
+                                    }
+                                } catch (InterruptedException ex) {
+                                }
 
                                 Intent i = new Intent(Splashscreen.this, MainActivity.class);
                                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(i);
-                                int pid = android.os.Process.myPid();
-                                android.os.Process.killProcess(pid);
+
                                 finish();
-
-
                             }
-                        }, SPLASH_TIME_OUT);
+                        };
 
+                        thread.start();
+
+//                        new Handler().postDelayed(new Runnable() {
+//
+//                            @Override
+//                            public void run() {
+//
+//                                Intent i = new Intent(Splashscreen.this, MainActivity.class);
+//                                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                                startActivity(i);
+////                        int pid = android.os.Process.myPid();
+////                        android.os.Process.killProcess(pid);
+//                                finish();
+//
+//
+//                            }
+//                        }, SPLASH_TIME_OUT);
 
                         try {
 
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        // Connectet dann nicht!?
-//                        manager.unregisterNetworkCallback(this);
-
+                        manager.unregisterNetworkCallback(this);
                     }
-
                 });
             }
-
         }
     };
 
@@ -136,6 +153,7 @@ public class Splashscreen extends Activity {
     @Override
     protected void onPause() {
         try {
+
             unregisterReceiver(MyBroadcastReceiver);
         } catch (IllegalArgumentException e) {
             if (e.getMessage().contains("Receiver not registered")) {
@@ -149,6 +167,7 @@ public class Splashscreen extends Activity {
         super.onPause();
 
     }
+
 }
 
 
@@ -187,14 +206,15 @@ public class Splashscreen extends Activity {
 //            final NetworkRequest.Builder builder = new NetworkRequest.Builder();
 //            builder.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
 //
-//            connectivityManager.requestNetwork(builder.build(), new ConnectivityManager.NetworkCallback() {
-//
-//                @Override
-//                public void onAvailable(Network network) {
+////            connectivityManager.requestNetwork(builder.build(), new ConnectivityManager.NetworkCallback() {
+////
+////                @Override
+////                public void onAvailable(Network network) {
 //
 //            if (networkInfo != null && networkInfo.getType() == ConnectivityManager.TYPE_WIFI && networkInfo.isConnected()) {
 ////                        if (networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
-//
+////
+//                builder.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
 //                snackbar.dismiss();
 //                RelativeLayout parentLayout = (RelativeLayout) findViewById(R.id.coordinatorLayout);
 //                snackbar2 = Snackbar
@@ -210,7 +230,7 @@ public class Splashscreen extends Activity {
 //
 //                        startActivity(i);
 //                        finish();
-//                        connectivityManager.unregisterNetworkCallback();
+//
 //
 //                    }
 //                }, SPLASH_TIME_OUT);
@@ -224,8 +244,8 @@ public class Splashscreen extends Activity {
 //
 //        }
 ////            }
-//            });
-//        }
+////            });
+////        }
 //
 //    }
 //
